@@ -35,7 +35,7 @@ public class TreeMultiSet extends MultiSet {
      */
     @Override
     boolean isEmpty() {
-        return tree.isEmpty();
+        return tree.treeIsEmpty();
     }
 
     /**
