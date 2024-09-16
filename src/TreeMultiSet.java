@@ -1,6 +1,5 @@
 public class TreeMultiSet extends MultiSet {
-
-    // TODO add a Tree object as a private instance variable for this class.
+    private Tree tree;
     /**
      * Add the given item to this multiset.
      *
