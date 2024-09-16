@@ -1,5 +1,8 @@
 public class TreeMultiSet extends MultiSet {
     private Tree tree;
+    public TreeMultiSet(){
+        this.tree = new Tree();
+    }
     /**
      * Add the given item to this multiset.
      *
@@ -7,8 +10,49 @@ public class TreeMultiSet extends MultiSet {
      */
     @Override
     void add(Integer item) {
-        // TODO complete this method
+        tree.insert(item);
     }
-    // TODO write the rest of the implementation for this class so that it uses its private Tree
-    //      object to provide the MultiSet functionality.
+
+    /**
+     * Remove the given item from this multiset.
+     * @param item the item to remove
+     */
+    @Override
+    void remove(Integer item) {
+        tree.delete_item(item);
+    }
+    /**
+     * Return if the given item is contained in the multiset
+     * @param item the item that is checked
+     */
+    @Override
+    boolean contains(Integer item) {
+        return tree.contains(item);
+    }
+
+    /**
+     * Return if this multiset is empty
+     */
+    @Override
+    boolean isEmpty() {
+        return tree.isEmpty();
+    }
+
+    /**
+     * Count the number of given items in this multiset
+     * @param item the item to count
+     */
+    @Override
+    int count(Integer item) {
+        return tree.count();
+    }
+
+    /**
+     * Return size of this multiset
+     */
+    @Override
+    int size() {
+        return tree.getTotal();
+    }
+
 }
